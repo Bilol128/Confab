@@ -5,8 +5,14 @@ const navbar_list = document.querySelector(".navbar-list")
 const body = document.querySelector("body")
 const live_player__card = document.querySelectorAll(".live-player__card")
 const navbar = document.querySelector(".navbar")
+const burger_drop__p = document.querySelector(".burger-drop__p")
+const burger_drop__block = document.querySelector(".burger-drop__block")
+const burger_menu = document.querySelector(".burger-menu")
 
-
+burger_drop__p.addEventListener('click' , function(){
+    burger_drop__block.classList.toggle('burger_drop__blockActive')
+    burger_drop__p.classList.toggle('burger__p__active')
+})
 
 new Swiper ('.events-sldier' ,{
     slidesPerView:2.75,
@@ -96,7 +102,7 @@ live_player__card.forEach(live_player__cardelement => {
 
 
 navbar_burger__button.addEventListener('click' , function(){
-    navbar_list.classList.toggle('navbar_listActive')
+    burger_menu.classList.toggle('burger-menu__active')
     body.classList.toggle('body__lock')
     navbar_burger__button.classList.toggle('navbar_burger__buttonActive')
 })
